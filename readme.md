@@ -31,3 +31,8 @@ You can test this project using Postman. Import the provided Postman collection 
   <li>`Open Music API V2 Test.postman_collection.json`</li>
   <li>`OpenMusic API Test.postman_environment.json`</li>
 </ul>
+
+Note: Ensure that certain database tables are empty before running tests to avoid conflicts. You can clear the data with the following SQL command:
+```bash
+TRUNCATE albums, songs, users, authentications, playlists, playlist_songs, playlist_song_activities, collaborations;
+```
