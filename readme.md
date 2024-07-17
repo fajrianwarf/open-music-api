@@ -14,7 +14,11 @@ This project uses PostgreSQL as the database. To run this project, ensure Postgr
    ```bash
    npm install
    ```
-4. **Start the Project**  
+4. **Apply Postgres Migration**  
+   ```bash
+   npm run migrate up
+   ```
+5. **Start the Project**  
    ```bash
    npm start
    ```
@@ -24,6 +28,6 @@ This project uses PostgreSQL as the database. To run this project, ensure Postgr
 You can test this project using Postman. Import the provided Postman collection and environment files:
 
 <ul>
-  <li>`Open Music API V1 Test.postman_collection.json`</li>
+  <li>`Open Music API V2 Test.postman_collection.json`</li>
   <li>`OpenMusic API Test.postman_environment.json`</li>
 </ul>
