@@ -82,6 +82,21 @@ class AlbumsService {
       throw new NotFoundError('Failed to delete album. Id not found.');
     }
   }
+
+  async updateAlbumCoverUrl(id, url) {
+    const updatedAt = new Date().toISOString();
+
+    const query = {
+      text: 'UPDATE albums SET cover = $2, updated_at = $3 WHERE id = $1',
+      values: [id, url, updatedAt],
+    };
+
+    const result = await this._pool.query(query);
+
+    if (!result.rowCount) {
+      throw new NotFoundError('Failed to add Album Cover. Id not found.');
+    }
+  }
 }
 
 module.exports = AlbumsService;

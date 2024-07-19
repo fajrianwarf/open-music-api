@@ -12,7 +12,7 @@ class PlaylistSongsHandler {
     const { id: playlistId } = request.params;
 
     await this._playlistsService.verifyPlaylistAccess(playlistId, credentialId);
-    const playlistSongId = await this._playlistSongsService.addPlaylistSong(playlistId, songId);
+    await this._playlistSongsService.addPlaylistSong(playlistId, songId);
     await this._playlistsService.addPlaylistSongActivity(
       playlistId,
       songId,
@@ -22,10 +22,7 @@ class PlaylistSongsHandler {
 
     const response = h.response({
       status: 'success',
-      message: 'Playlist song berhasil ditambahkan',
-      data: {
-        playlistSongId,
-      },
+      message: 'Playlist song added successfully',
     });
     response.code(201);
     return response;
@@ -65,7 +62,7 @@ class PlaylistSongsHandler {
 
     const response = h.response({
       status: 'success',
-      message: 'Playlist Song berhasil dihapus',
+      message: 'Playlist Song deleted successfully',
     });
     response.code(200);
     return response;
