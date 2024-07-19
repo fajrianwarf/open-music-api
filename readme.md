@@ -8,7 +8,7 @@ This project uses PostgreSQL as the database. To run this project, ensure Postgr
    Ensure these services are installed on your machine:
 
    - [PostgreSQL](https://www.postgresql.org/download/)
-   - [Redis](https://redis.io/download) (used exclusively by the consumer for message queuing in another repository)
+   - [Redis](https://redis.io/download) (used exclusively in [Consumer Repository](https://github.com/fajrianwarf/open-music-api-queue-consumer))
    - [RabbitMQ](https://www.rabbitmq.com/download.html)
 
 2. **Configure Environment Variables**  
@@ -26,9 +26,11 @@ This project uses PostgreSQL as the database. To run this project, ensure Postgr
    ```bash
    npm start
    ```
-6. **Run the Consumer Repository**
-   Additionally, you need to run the consumer repository to handle background tasks. Clone and run it from here:
-   [Open Music API Queue Consumer](https://github.com/fajrianwarf/open-music-api-queue-consumer)
+6. **Run the Consumer Repository**  
+   Additionally, you **need** to run the [consumer repository](https://github.com/fajrianwarf/open-music-api-queue-consumer) to handle background tasks. Clone and run it from here:
+   ```bash
+   git clone https://github.com/fajrianwarf/open-music-api-queue-consumer
+   ```
 
 ## Testing
 
